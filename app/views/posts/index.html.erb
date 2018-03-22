@@ -2,10 +2,7 @@
 <div>
   <% @posts.each do |post| %>
     <h2>
-      <%= post.title %>
+      <%= link_to post.title, post_path(post) %>
     </h2>
-    <h3>
-      <%= post.body %>
-    </h3>
   <% end %>
 </div>

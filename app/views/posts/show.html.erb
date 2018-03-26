@@ -7,5 +7,13 @@
 </div>
 
 <div>
+  <% @comment.each do |comment| %>
+    <b><%= comment.title %></b>
+    <%= comment.body %>
+    <br />
+  <% end %>
+</div>
+
+<div>
   <%= link_to "Comment!", new_post_comment_path(@post) %>
 </div>

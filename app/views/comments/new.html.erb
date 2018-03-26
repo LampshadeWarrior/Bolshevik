@@ -3,7 +3,6 @@
 <%= simple_form_for @comment, url: post_comments_path, :method => :post do |f| %>
   <%= f.input :title %>
   <%= f.input :body %>
-  <!-- <%= f.input :post_id, :as => :hidden, :input_html => { :value => @post.id } %> -->
   <br />
   <%= f.submit "Submit!", class: "btn btn-primary" %>
   <br />

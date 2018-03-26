@@ -5,7 +5,7 @@ before_action :authenticate_user!
   end
 
   def create
-    @post = Post.find(params[:format])
+    @post = Post.find(params[:post_id])
     @post.comments.create(comment_params.merge(user: current_user, post_id: @post.id))
     redirect_to post_path(@post)
   end
